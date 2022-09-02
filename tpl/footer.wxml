@@ -1,0 +1,8 @@
+<template name="myfooter">
+    <view class="weui-footer">
+        <view class="weui-footer__links">
+            <navigator class="weui-footer__link weui-wa-hotarea" url="javascript:">感谢和风天气</navigator>
+        </view>
+        <view class="weui-footer__text">Copyright &copy; 2008-2022 weui.io</view>
+    </view>
+</template>>

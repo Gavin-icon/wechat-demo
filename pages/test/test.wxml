@@ -1,0 +1,17 @@
+<!--pages/test/test.wxml-->
+<camera
+    mode="normal"
+    resolution="high"
+    device-position="back"
+    flash="on"
+    frame-size="large"
+>
+</camera>
+<button bindtap="takePhoto">去拍照</button>
+<view>预览</view>
+<image mode="widthFix" src="{{src}}"></image>
+
+<view>
+    <button bindtap="simcode">扫一扫</button>
+    <text>扫码结果： {{result}}</text>
+</view>
