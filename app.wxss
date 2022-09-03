@@ -2,11 +2,32 @@
 @import 'weui.wxss';
 
 .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+.map-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: antiquewhite;
+    color: cornflowerblue;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}

@@ -28,6 +28,11 @@ Page({
             }
         })
     },
+    toUser() {
+        wx.navigateTo({
+          url: '../logs/logs',
+        })
+    },
     scanCode: function() {
         var that = this
         wx.scanCode({

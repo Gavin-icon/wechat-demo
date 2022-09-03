@@ -1,0 +1,38 @@
+<!--pages/route/walking.wxml-->
+<view aria-label="选项卡标题" class="weui-tabbar" aria-role="tablist">
+    <view bindtap="changeNav" data-type="walking" id="tab1" aria-labelledby="t1_title" aria-describedby="t1_tips" aria-selected="true" aria-controls="panel1" class="weui-tabbar__item weui-bar__item_on" aria-role="tab">
+        <view id="t1_tips" aria-hidden="true" style="display: inline-block; position: relative;">
+            <image src="../../static/images/walk-active.png" alt class="weui-tabbar__icon"></image>
+        </view>
+        <view id="t1_title" aria-hidden="true" class="weui-tabbar__label">步行</view>
+    </view>
+    <view bindtap="changeNav" data-type="bike" id="tab2" aria-labelledby="t2_title" aria-selected="false" aria-controls="panel2" class="weui-tabbar__item" aria-role="tab">
+        <image src="../../static/images/bike.png" alt class="weui-tabbar__icon"></image>
+        <view aria-hidden="true" id="t2_title" class="weui-tabbar__label">骑行</view>
+    </view>
+    <view bindtap="changeNav" data-type="car" id="tab3" aria-labelledby="t3_title" aria-describedby="t3_tips" aria-selected="false" aria-controls="panel3" class="weui-tabbar__item" aria-role="tab">
+        <view id="t3_tips" aria-hidden="true" style="display: inline-block; position: relative;">
+            <image src="../../static/images/car.png" alt class="weui-tabbar__icon"></image>
+        </view>
+        <view id="t3_title" aria-hidden="true" class="weui-tabbar__label">驾车</view>
+    </view>
+    <view bindtap="changeNav" data-type="bus" id="tab4" aria-labelledby="t4_title" aria-selected="false" aria-controls="panel4" class="weui-tabbar__item" aria-role="tab">
+        <image src="../../static/images/bus.png" alt class="weui-tabbar__icon"></image>
+        <view class="weui-tabbar__label" aria-hidden="true" id="t4_title">公交</view>
+    </view>
+</view>
+<view class="walking-con">
+    <view class="map-box" style="bottom: {{listHeight}}">
+        <map class="map" id="myMap" polyline="{{polyline}}" markers="{{markers}}" longitude="{{markers[0].longitude}}" latitude="{{markers[0].latitude}}" scale="14">
+        </map>
+    </view>
+    <view class="text-box" style="height: {{listHeight}}">
+        <view class="text">{{distance}} {{duration}}</view>
+        <view class="weui-cells weui-cells_after-title" wx:if="{{listShowed}}" style="overflow-y: scroll;">
+            <view class="weui-cell" aria-role="option" wx:for="{{steps}}" wx:key="index">
+                <view class="weui-cell__ft">{{index+1}}. {{item.instruction}}</view>
+            </view>
+        </view>
+        <view class="detail-button" bindtap="checkDetail">详情</view>
+    </view>
+</view>

@@ -10,9 +10,16 @@ Page({
         longitude: null,
         latitude: null,
         markers: [],
-        threeDaily: []
+        threeDaily: [],
+        icon: '../../static/images/marker.png'
     },
-
+    doSearch(e) {
+        if(e.currentTarget.dataset.keyword != "") {
+            wx.navigateTo({
+              url: '/pages/qweather/index?keyword=' + e.currentTarget.dataset.keyword,
+            })
+        }
+    },
     /**
      * 生命周期函数--监听页面加载
      */

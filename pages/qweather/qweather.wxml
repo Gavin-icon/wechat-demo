@@ -1,6 +1,42 @@
 <!--pages/qweather/qweather.wxml-->
-<map longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" scale="14" name="">
-</map>
+<view class="weui-grids">
+		<navigator bindtap="doSearch" data-keyword="美食" class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image src="{{icon}}" alt></image>
+			</view>
+			<view class="weui-grid__label">美食</view>
+		</navigator>
+		<navigator bindtap="doSearch" data-keyword="酒店" class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image src="{{icon}}" alt></image>
+			</view>
+			<view class="weui-grid__label">酒店</view>
+		</navigator>
+		<navigator bindtap="doSearch" data-keyword="加油站" class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image src="{{icon}}" alt></image>
+			</view>
+			<view class="weui-grid__label">加油站</view>
+		</navigator>
+		<navigator bindtap="doSearch" data-keyword="地铁" class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image src="{{icon}}" alt></image>
+			</view>
+			<view class="weui-grid__label">地铁</view>
+		</navigator>
+		<navigator bindtap="doSearch" data-keyword="公交站" class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image src="{{icon}}" alt></image>
+			</view>
+			<view class="weui-grid__label">公交站</view>
+		</navigator>
+		<navigator bindtap="doSearch" data-keyword="医院" class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image src="{{icon}}" alt></image>
+			</view>
+			<view class="weui-grid__label">医院</view>
+		</navigator>
+</view>
 
 <view class="weui-panel__hd">未来三天天气</view>
 <view class="weui-panel__bd">

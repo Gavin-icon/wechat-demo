@@ -7,11 +7,14 @@
     frame-size="large"
 >
 </camera>
-<button bindtap="takePhoto">去拍照</button>
+<button bindtap="takePhoto" type="primary">去拍照</button>
 <view>预览</view>
 <image mode="widthFix" src="{{src}}"></image>
 
 <view>
     <button bindtap="simcode">扫一扫</button>
     <text>扫码结果： {{result}}</text>
+</view>
+<view>
+    <button bindtap="toUser" type="warn">跳转到用户界面</button>
 </view>

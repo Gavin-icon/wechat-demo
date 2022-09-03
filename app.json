@@ -1,16 +1,28 @@
 {
   "pages":[
+    "pages/home/index",
     "pages/qweather/qweather",
+    "pages/qweather/index",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/test/test"
+    "pages/test/test",
+    "pages/route/walking",
+    "pages/route/bike",
+    "pages/route/car",
+    "pages/route/bus"
   ],
   "tabBar": {
     "list": [
       {
+          "pagePath": "pages/home/index"  ,
+          "iconPath": "static/images/marker.png",
+          "selectedIconPath": "static/images/marker_checked.png",
+          "text": "首页"
+      },
+      {
         "pagePath": "pages/qweather/qweather",
         "iconPath": "static/images/featured.png",
-        "text": "首页",
+        "text": "天气",
         "selectedIconPath": "static/images/featured-actived.png"
       },
       {
@@ -29,8 +41,8 @@
   },
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#00b38a",
+    "navigationBarTitleText": "和风天气",
     "navigationBarTextStyle":"black"
   },
   "permission": {

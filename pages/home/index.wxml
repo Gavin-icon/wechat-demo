@@ -1,0 +1,32 @@
+<!--pages/home/index.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-search-bar {{inputShowed ? 'weui-search-bar_focusing' : ''}}" id="searchBar">
+            <form class="weui-search-bar__form" aria-role="combobox" aria-haspopup="true" aria-expanded="{{inputVal.length > 0 ? 'true' : 'false'}}" aria-owns="searchResult">
+                <view class="weui-search-bar__box">
+                    <i class="weui-icon-search"></i>
+                    <input aria-controls="searchResult" type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view aria-role="button" aria-label="清除" class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput"></view>
+                </view>
+                <label class="weui-search-bar__label" bindtap="showInput">
+                    <i class="weui-icon-search"></i>
+                    <span class="weui-search-bar__text">搜索</span>
+                </label>
+            </form>
+            <view aria-role="button" class="weui-search-bar__cancel-btn" bindtap="hideInput">取消</view>
+        </view>
+        <view style="height: 180px; overflow-y: scroll;" aria-role="listbox" id="searchResult" class="weui-cells searchbar-result" wx:if="{{tips.length > 0}}">
+            <view class="weui-cell__bd weui-cell_primary">结果：{{tips.length}}条</view>
+            <view wx:for="{{tips}}" wx:key="id" aria-hidden="true" id="js_p1m1_bd" class="weui-media-box__bd" bindtap="goRoute" data-poilocation="{{item.location}}">
+                <text class="weui-media-box__title">{{item.name}}</text>
+                <view class="weui-media-box__desc">{{item.district}}, {{item.address}}</view>
+            </view>
+        </view>
+    </view>
+    <map id="myMap" class="map" markers="{{markers}}" scale="14" longitude="{{longitude}}" latitude="{{latitude}}">
+    </map>
+    <view class="map-text">
+        <text>{{markers[0].name}}, </text>
+        <text>{{markers[0].desc}}</text>
+    </view>
+</view>

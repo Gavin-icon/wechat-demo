@@ -1,0 +1,14 @@
+<!--pages/qweather/index.wxml-->
+<view class="page">
+    <map class="map" markers="{{markers}}"
+        scale="16"
+        longitude="{{longitude}}"
+        latitude="{{latitude}}"
+        bindmarkertap="markertap"
+    >
+    </map>
+    <view class="map-text">
+        <text>{{textData.name}}</text>
+        <text>{{textData.address}}</text>
+    </view>
+</view>

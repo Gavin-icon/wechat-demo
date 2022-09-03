@@ -1,0 +1,50 @@
+/* pages/route/walking.wxss */
+.weui-tabbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: #3df;
+}
+.walking-con {
+    margin-top: 58px;
+    width: 100vw;
+    height: 100vh;
+}
+.map-box {
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.text-box {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #FFF;
+    color: chocolate;
+    overflow-y: scroll;
+}
+.text-box .text {
+    margin: 10px;
+}
+.text-box .detail-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 3px 5px;
+    color: #fff;
+    background: #0091ff;
+    width: 50px;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 999;
+}
+.weui-cell {
+    padding: 6px;
+}
+.weui-cell__ft {
+    padding: 6px;
+    text-align: left;
+}
